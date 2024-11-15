@@ -14,7 +14,6 @@ import {
 // Import rootAuthLoader
 import { rootAuthLoader } from "@clerk/remix/ssr.server";
 import { ClerkApp } from "@clerk/remix";
-import { Button } from "~/components/ui/button";
 
 import "./tailwind.css";
 
@@ -58,7 +57,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <Button>Oh Lecko mio</Button>
         <ScrollRestoration />
         <Scripts />
       </body>
