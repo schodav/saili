@@ -19,8 +19,8 @@ export default function Index() {
         <LoginLogout />
       </header>
 
-      <main>
-        <div className="flex flex-col items-center gap-16">
+      <main className="container mx-auto p-4">
+        <div className="flex flex-col items-center gap-16 w-full">
           <div className="mt-16">
             <SignedOut>
               <Home />
