@@ -1,4 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
+import {
+  SignInButton,
+  SignOutButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/remix";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,6 +18,28 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="flex h-screen items-center justify-center">
+      <div>
+        <h1>Index Route</h1>
+        <SignedIn>
+          <p>You are signed in!</p>
+          <div>
+            <p>View your profile here</p>
+            <UserButton />
+          </div>
+          <div>
+            <SignOutButton />
+          </div>
+        </SignedIn>
+        <SignedOut>
+          <p>You are signed out</p>
+          <div>
+            <SignInButton />
+          </div>
+          <div>
+            <SignUpButton />
+          </div>
+        </SignedOut>
+      </div>
       <div className="flex flex-col items-center gap-16">
         <header className="flex flex-col items-center gap-9">
           <h1 className="leading text-2xl font-bold text-gray-800 dark:text-gray-100">
