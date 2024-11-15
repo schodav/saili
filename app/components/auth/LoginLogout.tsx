@@ -1,11 +1,4 @@
-import {
-  SignInButton,
-  SignOutButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/remix";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/remix";
 
 export default function LoginLogout() {
   return (
@@ -19,13 +12,10 @@ export default function LoginLogout() {
         <div className="flex items-center gap-4 ">
           <div>
             <SignInButton mode="modal">
-              <button className="border rounded-md px-4 py-1">Log in</button>
+              <button className="text-sm/6 font-semibold text-gray-300">
+                Log in <span aria-hidden="true">&rarr;</span>
+              </button>
             </SignInButton>
-          </div>
-          <div>
-            <SignUpButton mode="modal">
-              <button className="border rounded-md px-4 py-1">Sign Up</button>
-            </SignUpButton>
           </div>
         </div>
       </SignedOut>
