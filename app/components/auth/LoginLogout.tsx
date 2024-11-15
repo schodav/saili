@@ -1,4 +1,3 @@
-import React from "react";
 import {
   SignInButton,
   SignOutButton,
@@ -14,7 +13,6 @@ export default function LoginLogout() {
       <SignedIn>
         <div className="flex items-center gap-4">
           <UserButton />
-          <SignOutButton />
         </div>
       </SignedIn>
       <SignedOut>

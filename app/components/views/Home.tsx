@@ -1,4 +1,3 @@
-import React from "react";
 import Snake from "./Snake";
 
 export default function Home() {

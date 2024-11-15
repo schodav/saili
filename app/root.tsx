@@ -39,9 +39,14 @@ export const meta: MetaFunction = () => [
 ];
 
 export const loader: LoaderFunction = (args) => {
-  return rootAuthLoader(args, ({ request }) => {
-    const { sessionId, userId, getToken } = request.auth;
-    // fetch data
+  return rootAuthLoader(args, async ({ request }) => {
+    // const { sessionId, userId, getToken } = request.auth;
+    // // fetch data
+    // console.log({
+    //   sessionId,
+    //   userId,
+    //   getToken: await getToken(),
+    // });
     return { yourData: "here" };
   });
 };
