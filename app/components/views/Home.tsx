@@ -1,4 +1,5 @@
 import React from "react";
+import Snake from "./Snake";
 
 export default function Home() {
   return (
@@ -8,6 +9,10 @@ export default function Home() {
         This is a students project created in just 48h at the ÖH Hackathon 2024
       </p>
       <p className="mt-5">Please Sign in to leck mich am Arsch.</p>
+
+      <div>
+        <Snake></Snake>
+      </div>
     </div>
   );
 }
